@@ -12,15 +12,17 @@ export function Hero() {
       id="top"
       className="relative min-h-[96vh] flex flex-col justify-between pt-28 pb-14 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#1257C9] text-white"
     >
-      {/* Background Subtle Nautical Grid & Vector Waves */}
-      <div className="absolute inset-0 z-0 select-none pointer-events-none opacity-20">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.4) 1px, transparent 0)`,
-            backgroundSize: "32px 32px",
-          }}
-        />
+      {/* Background Official Vector Map Silhouette from public/images/mappa.svg */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full max-w-lg md:max-w-2xl lg:max-w-3xl h-[85%] max-h-[820px] pointer-events-none select-none z-0 opacity-35 md:opacity-55 lg:opacity-70 flex items-center justify-end pr-0 lg:pr-6">
+        <div className="relative w-full h-full">
+          <Image
+            src="/images/mappa.svg"
+            alt="Mappa della rotta da Monte di Procida a Procida"
+            fill
+            priority
+            className="object-contain object-right"
+          />
+        </div>
       </div>
 
       {/* Top Territory Badge & Coordinates */}
@@ -94,7 +96,7 @@ export function Hero() {
           {/* Quick Route Box Column */}
           <div className="lg:col-span-4 space-y-4">
             {/* 3 OTTOBRE Card */}
-            <div className="p-6 rounded-3xl bg-[#071A42] border-2 border-[#FFE500] shadow-2xl space-y-4">
+            <div className="p-6 rounded-3xl bg-[#071A42]/95 border-2 border-[#FFE500] shadow-2xl space-y-4 backdrop-blur-md">
               <div className="flex items-center justify-between border-b border-white/15 pb-3">
                 <span className="font-mono text-xs font-bold text-[#FFE500] uppercase tracking-widest">
                   DATA UFFICIALE
