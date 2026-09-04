@@ -16,13 +16,14 @@ export function Salvatore() {
           
           {/* Visual Showcase */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden bg-[#1257C9] border-2 border-white/30 shadow-2xl p-4 group">
+            <div className="relative w-full max-w-md aspect-[3/4] rounded-3xl overflow-hidden bg-[#1257C9] border-2 border-white/30 shadow-2xl p-4 group">
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-[#040F28]">
                 <Image
                   src={eventConfig.salvatore.imageSrc}
                   alt={eventConfig.salvatore.name}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  priority
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
