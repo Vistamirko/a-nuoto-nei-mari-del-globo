@@ -158,7 +158,7 @@ export const eventConfig: EventConfig = {
     ],
     keyMessage:
       "Il mio nuoto non è una ricerca di record, ma un ponte tra le persone per dare voce a chi non viene ascoltato.",
-    imageSrc: "/images/salvatore-placeholder.svg",
+    imageSrc: "/images/salvatore-cimmino-600x800.jpg",
   },
   initiative: {
     title: "L'EVENTO NEI CAMPI FLEGREI",
