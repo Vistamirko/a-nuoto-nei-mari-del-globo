@@ -48,9 +48,9 @@ export function Hero() {
             {/* Monumental Macchia Headline */}
             <div className="space-y-1 sm:space-y-2">
               <h1 className="text-fluid-giant font-macchia text-white leading-[0.86] tracking-tight drop-shadow-sm select-none">
-                <span className="block text-[#071A42]">A NUOTO</span>
-                <span className="block text-[#071A42]">NEI MARI</span>
-                <span className="block text-white">DEL GLOBO</span>
+                <span className="block font-macchia text-[#071A42]">A NUOTO</span>
+                <span className="block font-macchia text-[#071A42]">NEI MARI</span>
+                <span className="block font-macchia text-white">DEL GLOBO</span>
               </h1>
             </div>
 
