@@ -130,11 +130,17 @@ export function Countdown() {
           </div>
 
           <a
-            href={`mailto:${eventConfig.contact.email}?subject=Info%20Meteo%20e%20Data%20Tappa%203%20Ottobre`}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#22E57A] hover:bg-emerald-400 text-[#071A42] font-mono font-bold text-xs uppercase tracking-wider shadow-md transition-all shrink-0"
+            href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+              "A Nuoto nei Mari del Globo · Tappa Campi Flegrei (Salvatore Cimmino)"
+            )}&dates=20261003T070000Z/20261003T123000Z&details=${encodeURIComponent(
+              "Traversata a nuoto di Salvatore Cimmino da Monte di Procida (Acquamorta) a Procida (Punta Lingua). Organizzato da: Vela Latina Monte di Procida, Laboratorio Cumano, Io Respiro Mare.\nTre Libri. Un Mare. Un Ponte.\n*Nota: Data e orari soggetti a condizioni meteo-marine."
+            )}&location=${encodeURIComponent("Acquamorta, Monte di Procida (NA) → Procida")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#22E57A] hover:bg-emerald-400 text-[#071A42] font-mono font-bold text-xs uppercase tracking-wider shadow-md transition-all shrink-0 hover:scale-105 whitespace-nowrap"
           >
-            <Bell className="w-3.5 h-3.5" />
-            <span>Resta Aggiornato</span>
+            <Calendar className="w-4 h-4" />
+            <span>Aggiungi a Google Calendar</span>
           </a>
         </div>
       </div>
