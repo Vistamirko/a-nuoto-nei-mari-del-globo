@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, Waves, MapPin, Compass, Clock, BookOpen, Award } from "lucide-react";
+import { ArrowDown, Waves, MapPin, Compass, Clock, BookOpen, Award, Sparkles } from "lucide-react";
 import { eventConfig } from "@/config/event";
 
 export function Hero() {
@@ -13,7 +13,7 @@ export function Hero() {
       className="relative min-h-[96vh] flex flex-col justify-between pt-28 pb-14 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#1257C9] text-white"
     >
       {/* Background Official Vector Map Silhouette from public/images/mappa.svg */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full max-w-lg md:max-w-2xl lg:max-w-3xl h-[85%] max-h-[820px] pointer-events-none select-none z-0 opacity-35 md:opacity-55 lg:opacity-70 flex items-center justify-end pr-0 lg:pr-6">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full max-w-lg md:max-w-2xl lg:max-w-3xl h-[85%] max-h-[820px] pointer-events-none select-none z-0 opacity-30 md:opacity-45 lg:opacity-60 flex items-center justify-end pr-0 lg:pr-6">
         <div className="relative w-full h-full">
           <Image
             src="/images/mappa.svg"
@@ -93,8 +93,34 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Quick Route Box Column */}
+          {/* Right Top Column: Salvatore's Photo & 3 Ottobre Details */}
           <div className="lg:col-span-4 space-y-4">
+            {/* Salvatore Cimmino Profile Card in Top Right */}
+            <div className="p-4 rounded-3xl bg-[#071A42]/95 border-2 border-white/20 shadow-2xl backdrop-blur-md flex items-center gap-4 group">
+              <div className="relative w-24 h-32 rounded-2xl overflow-hidden shrink-0 border-2 border-[#FFE500] shadow-md bg-[#040F28]">
+                <Image
+                  src={eventConfig.salvatore.imageSrc}
+                  alt={eventConfig.salvatore.name}
+                  fill
+                  priority
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              <div className="flex flex-col justify-center font-mono">
+                <div className="inline-flex items-center gap-1.5 text-[10px] text-[#22E57A] font-bold uppercase tracking-wider mb-1">
+                  <Sparkles className="w-3 h-3 text-[#FFE500]" />
+                  <span>Protagonista</span>
+                </div>
+                <h3 className="font-macchia text-xl text-white uppercase leading-tight">
+                  {eventConfig.salvatore.name}
+                </h3>
+                <p className="text-[11px] text-white/70 mt-1 leading-snug">
+                  Nuotatore per i Diritti &amp; l&apos;Inclusione
+                </p>
+              </div>
+            </div>
+
             {/* 3 OTTOBRE Card */}
             <div className="p-6 rounded-3xl bg-[#071A42]/95 border-2 border-[#FFE500] shadow-2xl space-y-4 backdrop-blur-md">
               <div className="flex items-center justify-between border-b border-white/15 pb-3">
