@@ -249,7 +249,7 @@ export const eventConfig: EventConfig = {
         description:
           "Il mare come elemento rigenerante e vitale in cui perdersi per ritrovarsi. Un viaggio intimo nel rapporto ancestrale tra uomo e acqua.",
         quote: "Dentro ogni onda c'è il ritmo del nostro stesso respiro.",
-        coverImage: "/images/books/iorespiromare.svg",
+        coverImage: "/images/cover-io-respiro-mare-800.webp",
       },
     ],
   },
