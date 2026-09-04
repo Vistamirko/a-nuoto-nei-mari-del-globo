@@ -6,6 +6,7 @@ export interface BookItem {
   description: string;
   quote?: string;
   coverImage: string;
+  buyUrl?: string;
 }
 
 export interface ProgramStep {
@@ -250,6 +251,7 @@ export const eventConfig: EventConfig = {
           "Il mare come elemento rigenerante e vitale in cui perdersi per ritrovarsi. Un viaggio intimo nel rapporto ancestrale tra uomo e acqua.",
         quote: "Dentro ogni onda c'è il ritmo del nostro stesso respiro.",
         coverImage: "/images/cover-io-respiro-mare-800.webp",
+        buyUrl: "https://www.amazon.it/dp/B0FXS6DJ8G",
       },
     ],
   },

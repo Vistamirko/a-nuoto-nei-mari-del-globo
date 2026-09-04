@@ -41,17 +41,41 @@ export function BooksSection() {
             >
               <div>
                 {/* Book Cover Container */}
-                <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-[#071A42] mb-6 border border-white/20 shadow-inner">
-                  <Image
-                    src={book.coverImage}
-                    alt={book.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#FFE500] text-[#071A42] text-[10px] font-mono font-bold uppercase">
-                    {book.theme}
+                {book.buyUrl ? (
+                  <a
+                    href={book.buyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-[#071A42] mb-6 border border-white/20 shadow-inner group/cover cursor-pointer"
+                  >
+                    <Image
+                      src={book.coverImage}
+                      alt={book.title}
+                      fill
+                      className="object-cover group-hover/cover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#FFE500] text-[#071A42] text-[10px] font-mono font-bold uppercase z-10">
+                      {book.theme}
+                    </div>
+                    <div className="absolute inset-0 bg-[#071A42]/60 opacity-0 group-hover/cover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
+                      <span className="px-4 py-2 rounded-xl bg-[#FFE500] text-[#071A42] font-mono font-extrabold text-xs uppercase tracking-wider shadow-lg">
+                        VEDI SU AMAZON ↗
+                      </span>
+                    </div>
+                  </a>
+                ) : (
+                  <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-[#071A42] mb-6 border border-white/20 shadow-inner">
+                    <Image
+                      src={book.coverImage}
+                      alt={book.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#FFE500] text-[#071A42] text-[10px] font-mono font-bold uppercase">
+                      {book.theme}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 <h3 className="font-macchia text-2xl text-white uppercase mb-1 leading-tight">
                   {book.title}
@@ -64,6 +88,20 @@ export function BooksSection() {
                 <p className="font-mono text-xs sm:text-sm text-white/85 leading-relaxed mb-6">
                   {book.description}
                 </p>
+
+                {book.buyUrl && (
+                  <div className="mb-6">
+                    <a
+                      href={book.buyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FFE500] hover:bg-yellow-300 text-[#071A42] font-mono font-extrabold text-xs uppercase tracking-wider transition-all shadow-md hover:scale-105"
+                    >
+                      <BookOpen className="w-3.5 h-3.5" />
+                      <span>DISPONIBILE SU AMAZON ↗</span>
+                    </a>
+                  </div>
+                )}
               </div>
 
               {book.quote && (
