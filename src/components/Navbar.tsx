@@ -24,7 +24,6 @@ export function Navbar() {
     { label: "I 3 Libri", href: "#libri" },
     { label: "Programma", href: "#programma" },
     { label: "Locandina", href: "#locandina" },
-    { label: "Foto", href: "#galleria" },
   ];
 
   return (

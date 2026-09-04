@@ -8,7 +8,6 @@ import { RouteMap } from "@/components/RouteMap";
 import { BooksSection } from "@/components/BooksSection";
 import { Program } from "@/components/Program";
 import { OfficialPoster } from "@/components/OfficialPoster";
-import { PhotoGallery } from "@/components/PhotoGallery";
 import { Partners } from "@/components/Partners";
 import { Footer } from "@/components/Footer";
 
@@ -44,10 +43,7 @@ export default function Home() {
         {/* 8. Locandina Ufficiale */}
         <OfficialPoster />
 
-        {/* 9. Galleria Fotografica Immersiva */}
-        <PhotoGallery />
-
-        {/* 10. Partner & Istituzioni */}
+        {/* 9. Partner & Istituzioni */}
         <Partners />
       </main>
 

@@ -90,11 +90,6 @@ export function Footer() {
                   Locandina Ufficiale
                 </Link>
               </li>
-              <li>
-                <Link href="#galleria" className="hover:text-[#22E57A] transition-colors">
-                  Galleria Fotografica
-                </Link>
-              </li>
             </ul>
           </div>
 
