@@ -137,10 +137,10 @@ export function Countdown() {
             )}&location=${encodeURIComponent("Acquamorta, Monte di Procida (NA) → Procida")}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#22E57A] hover:bg-emerald-400 text-[#071A42] font-mono font-bold text-xs uppercase tracking-wider shadow-md transition-all shrink-0 hover:scale-105 whitespace-nowrap"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#22E57A] hover:bg-[#FFE500] text-[#071A42] font-mono font-extrabold text-xs uppercase tracking-wider shadow-xl transition-all duration-300 shrink-0 hover:scale-105 whitespace-nowrap"
           >
-            <Calendar className="w-4 h-4" />
-            <span>Aggiungi a Google Calendar</span>
+            <Calendar className="w-4 h-4 text-[#071A42]" />
+            <span>BLOCCA IL 3 OTTOBRE ⚡</span>
           </a>
         </div>
       </div>
