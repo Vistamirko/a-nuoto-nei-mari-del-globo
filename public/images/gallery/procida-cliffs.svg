@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cliffGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#07162C" />
+      <stop offset="35%" stop-color="#0E4477" />
+      <stop offset="70%" stop-color="#0077B6" />
+      <stop offset="100%" stop-color="#030A16" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1100" fill="url(#cliffGrad)" />
+  <!-- Colorful Procida Village on Cliff -->
+  <g transform="translate(150, 400)">
+    <!-- Cliff -->
+    <path d="M-150,400 L650,400 L650,200 Q250,150 -150,250 Z" fill="#D4A373" opacity="0.5" />
+    <!-- Houses -->
+    <rect x="0" y="100" width="80" height="90" fill="#FFDDD2" rx="4" />
+    <rect x="70" y="60" width="90" height="130" fill="#83C5BE" rx="4" />
+    <rect x="150" y="90" width="85" height="100" fill="#E29578" rx="4" />
+    <rect x="220" y="50" width="100" height="140" fill="#FAF3E0" rx="4" />
+    <rect x="310" y="110" width="70" height="80" fill="#ECD09F" rx="4" />
+  </g>
+  <rect x="50" y="990" width="300" height="50" rx="8" fill="#030A16" fill-opacity="0.8" stroke="#00B4D8" stroke-width="1" />
+  <text x="75" y="1022" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="700" fill="#F8FBFE">LE FALESIE DI PROCIDA</text>
+</svg>

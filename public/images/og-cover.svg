@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ogGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030A16" />
+      <stop offset="45%" stop-color="#07162C" />
+      <stop offset="85%" stop-color="#005A94" />
+      <stop offset="100%" stop-color="#00B4D8" />
+    </linearGradient>
+    <radialGradient id="ogGlow" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#00B4D8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#030A16" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ogGrad)" />
+  <circle cx="850" cy="200" r="400" fill="url(#ogGlow)" />
+
+  <!-- Bathymetric curves -->
+  <g stroke="#00B4D8" stroke-width="1.5" fill="none" opacity="0.2">
+    <path d="M-50,200 Q400,100 800,240 T1300,180" />
+    <path d="M-50,350 Q500,280 900,380 T1300,320" />
+    <path d="M-50,500 Q400,450 850,520 T1300,480" />
+  </g>
+
+  <!-- Content -->
+  <g transform="translate(80, 100)">
+    <rect width="400" height="34" rx="17" fill="#0B2545" stroke="#00B4D8" stroke-width="1" />
+    <text x="200" y="22" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="2.5" fill="#90E0EF" text-anchor="middle">CAMPI FLEGREI · MONTE DI PROCIDA → PROCIDA</text>
+
+    <text x="0" y="110" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="64" font-weight="900" fill="#F8FBFE" letter-spacing="-2">A NUOTO NEI MARI</text>
+    <text x="0" y="180" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="64" font-weight="900" fill="#00B4D8" letter-spacing="-2">DEL GLOBO</text>
+
+    <text x="0" y="240" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="24" font-weight="700" fill="#ECD09F">CON SALVATORE CIMMINO</text>
+    
+    <text x="0" y="290" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="18" fill="#CAF0F8" opacity="0.9">Un mare che unisce, una comunità che resiste.</text>
+    
+    <g transform="translate(0, 360)">
+      <text x="0" y="0" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" letter-spacing="3" fill="#90E0EF">DISABILITÀ · INCLUSIONE · RESILIENZA · SCUOLE · TERRITORIO</text>
+    </g>
+  </g>
+</svg>

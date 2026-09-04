@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="coolBook1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0066FF" />
+      <stop offset="60%" stop-color="#040A18" />
+      <stop offset="100%" stop-color="#00E5FF" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="900" fill="url(#coolBook1)" rx="12" />
+  
+  <!-- Modern 3D Spine Ridge -->
+  <rect x="0" y="0" width="30" height="900" fill="#000000" opacity="0.35" />
+  <line x1="30" y1="0" x2="30" y2="900" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="2" />
+
+  <!-- Thematic Sticker Badge -->
+  <g transform="translate(60, 60)">
+    <rect width="180" height="38" rx="8" fill="#00E5FF" />
+    <text x="90" y="24" font-family="'Syne', 'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="900" letter-spacing="2" fill="#040A18" text-anchor="middle">DISABILITÀ</text>
+  </g>
+
+  <!-- Kinetic Graphic: Wave against current -->
+  <g transform="translate(100, 240)">
+    <circle cx="200" cy="150" r="140" fill="none" stroke="#00E5FF" stroke-width="6" stroke-dasharray="16 12" />
+    <path d="M50,150 L350,150" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" />
+    <path d="M260,80 L350,150 L260,220" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(60, 600)">
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" letter-spacing="4" fill="#00E5FF">SALVATORE CIMMINO</text>
+    
+    <text x="0" y="55" font-family="'Syne', 'Outfit', sans-serif" font-size="44" font-weight="900" fill="#FFFFFF" letter-spacing="-1">DISABILITÀ</text>
+    <text x="0" y="110" font-family="'Syne', 'Outfit', sans-serif" font-size="40" font-weight="900" fill="#00E5FF" letter-spacing="-1">CONTROCORRENTE</text>
+    
+    <text x="0" y="170" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" opacity="0.8">Un viaggio oltre i limiti · Percorso Scuole</text>
+  </g>
+</svg>

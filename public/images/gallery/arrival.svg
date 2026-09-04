@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="arrivalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021B3A" />
+      <stop offset="50%" stop-color="#0077B6" />
+      <stop offset="100%" stop-color="#030A16" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#arrivalGrad)" />
+  <!-- Pier and welcoming celebration -->
+  <g transform="translate(600, 420)">
+    <!-- Pier dock -->
+    <rect x="-400" y="80" width="800" height="40" fill="#07162C" />
+    <!-- Salvatore emerging with open arms -->
+    <circle cx="0" cy="-30" r="24" fill="#F8FBFE" />
+    <path d="M-15,40 L-15,0 L15,0 L15,40 Z" fill="#00B4D8" />
+    <path d="M-50,-10 L-15,-5 L15,-5 L50,-10" stroke="#F8FBFE" stroke-width="10" stroke-linecap="round" fill="none" />
+    <!-- Cheering crowd -->
+    <circle cx="-150" cy="20" r="14" fill="#E2B774" />
+    <circle cx="-100" cy="10" r="15" fill="#EBF8FF" />
+    <circle cx="100" cy="10" r="15" fill="#EBF8FF" />
+    <circle cx="150" cy="20" r="14" fill="#E2B774" />
+    <circle cx="200" cy="15" r="13" fill="#90E0EF" />
+  </g>
+  <rect x="50" y="700" width="340" height="50" rx="8" fill="#030A16" fill-opacity="0.8" stroke="#00B4D8" stroke-width="1" />
+  <text x="75" y="732" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="700" fill="#F8FBFE">L'ARRIVO E LA FESTA IN PIAZZA</text>
+</svg>

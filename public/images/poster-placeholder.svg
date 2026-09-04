@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1550" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url("https://use.typekit.net/gqr0pvc.css");
+      .macchia-font { font-family: "macchia", sans-serif; font-weight: 400; font-style: normal; }
+      .menlo-font { font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    </style>
+  </defs>
+
+  <!-- Solid Poster Blue Background -->
+  <rect width="1200" height="1550" fill="#1257C9" />
+
+  <!-- Coast / Territory Mainland Vector Silhouette (Top Right - Monte di Procida) -->
+  <path d="M1050,0 Q1060,80 1100,120 Q1050,150 1070,220 Q1010,240 1050,300 L1200,320 L1200,0 Z" fill="#FFFFFF" />
+
+  <!-- Procida Island Silhouette -->
+  <path d="M740,560 C780,570 820,580 840,600 C860,610 880,605 900,615 C920,620 940,615 950,625 C955,635 940,650 930,660 C915,670 900,680 880,690 C840,710 820,730 810,750 C800,770 780,800 760,820 C730,850 710,870 690,920 C670,950 640,960 630,960 C615,955 600,940 590,930 C580,915 570,900 560,880 C550,860 565,850 580,845 C610,830 630,810 640,780 C650,750 630,730 610,715 C590,700 580,680 590,660 C600,640 610,630 630,620 C660,600 700,580 740,560 Z" fill="#FFFFFF" />
+  
+  <!-- Vivara Small Island Silhouette -->
+  <path d="M525,860 C535,850 550,860 555,875 C560,900 545,925 530,940 C520,945 510,935 505,920 C500,900 515,870 525,860 Z" fill="#FFFFFF" />
+
+  <!-- Yellow Route Line -->
+  <path d="M1080,225 C1010,240 920,300 815,440 C750,530 650,650 640,750 C630,850 680,940 730,965 C760,980 810,940 820,870 C830,800 890,730 920,680 C950,630 960,625 980,635" 
+        fill="none" stroke="#FFE500" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Acquamorta Marker -->
+  <circle cx="1080" cy="225" r="22" fill="#22E57A" />
+  <g transform="translate(1080, 275)" text-anchor="middle">
+    <text class="macchia-font" font-size="28" fill="#22E57A" letter-spacing="1">ACQUAMORTA</text>
+    <text class="menlo-font" font-size="24" font-weight="700" fill="#FFFFFF" dy="32">ORE 9:00</text>
+  </g>
+
+  <!-- Punta Lingua / Procida Marker -->
+  <circle cx="985" cy="635" r="22" fill="#22E57A" />
+  <g transform="translate(1000, 480)" text-anchor="middle">
+    <text class="macchia-font" font-size="26" fill="#22E57A" letter-spacing="1">PUNTA LINGUA | PROCIDA</text>
+    <text class="menlo-font" font-size="24" font-weight="700" fill="#FFFFFF" dy="32">ORE 12: 30 CIRCA</text>
+  </g>
+
+  <!-- Main Screamed Headline in Macchia Font -->
+  <g transform="translate(45, 110)">
+    <text class="macchia-font" font-size="110" fill="#071A42" letter-spacing="-1">A NUOTO</text>
+    <text class="macchia-font" font-size="110" fill="#071A42" letter-spacing="-1" dy="110">NEI MARI</text>
+    <text class="macchia-font" font-size="110" fill="#071A42" letter-spacing="-1" dy="220">DEL GLOBO</text>
+    
+    <!-- CON SALVATORE CIMMINO -->
+    <text class="menlo-font" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="2" dy="310">CON SALVATORE CIMMINO</text>
+  </g>
+
+  <!-- DA MONTE DI PROCIDA A PROCIDA -->
+  <g transform="translate(80, 560)">
+    <text class="menlo-font" font-size="24" font-weight="700" fill="#FFFFFF" letter-spacing="2">DA MONTE DI PROCIDA A PROCIDA</text>
+  </g>
+
+  <!-- TRE LIBRI. UN MARE. UN PONTE. (Slightly tilted) -->
+  <g transform="translate(110, 710) rotate(-6)">
+    <text class="macchia-font" font-size="64" fill="#071A42" letter-spacing="0">TRE LIBRI.</text>
+    <text class="macchia-font" font-size="64" fill="#071A42" letter-spacing="0" dy="65">UN MARE.</text>
+    <text class="macchia-font" font-size="64" fill="#071A42" letter-spacing="0" dy="130">UN PONTE.</text>
+    <text class="menlo-font" font-size="26" font-weight="700" fill="#FFFFFF" letter-spacing="2" dy="180">A NUOTO E IN VELA LATINA</text>
+  </g>
+
+  <!-- ORGANIZZATO DA -->
+  <g transform="translate(45, 1070)">
+    <text class="menlo-font" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="1">ORGANIZZATO DA:</text>
+    <text class="menlo-font" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="1" dy="32">VELA LATINA MONTE DI PROCIDA | LABORATORIO CUMANO | IO RESPIRO MARE</text>
+  </g>
+
+  <!-- 3 OTTOBRE in Giant Macchia White -->
+  <g transform="translate(45, 1240)">
+    <text class="macchia-font" font-size="140" fill="#FFFFFF" letter-spacing="-2">3 OTTOBRE</text>
+  </g>
+
+  <!-- Mottos & Hashtags -->
+  <g transform="translate(45, 1300)">
+    <text class="menlo-font" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="1">DISABILITÀ CONTRO CORRENTE | IO RESPIRO MARE | #PROCIDANONDEVEMORIRE</text>
+  </g>
+
+  <!-- Footer White Bar with Logos -->
+  <rect x="0" y="1350" width="1200" height="200" fill="#FFFFFF" />
+
+  <!-- Three Logos in Footer -->
+  <!-- Logo 1: Laboratorio Cumano -->
+  <g transform="translate(70, 1375)">
+    <rect width="110" height="110" rx="8" fill="#0C4A6E" />
+    <circle cx="35" cy="35" r="10" fill="#FFE500" />
+    <path d="M20,80 L55,40 L90,80 Z" fill="#22E57A" opacity="0.9" />
+    <text class="menlo-font" font-size="8" font-weight="700" fill="#FFFFFF" text-anchor="middle" x="55" y="100">LABORATORIO CUMANO</text>
+  </g>
+
+  <!-- Logo 2: Io Respiro Mare -->
+  <g transform="translate(220, 1375)">
+    <rect width="110" height="110" rx="8" fill="#081A42" />
+    <text class="macchia-font" font-size="52" fill="#22E57A" text-anchor="middle" x="55" y="65">RM</text>
+    <text class="menlo-font" font-size="8" font-weight="700" fill="#FFFFFF" text-anchor="middle" x="55" y="98">IO RESPIRO MARE</text>
+  </g>
+
+  <!-- Logo 3: Vela Latina -->
+  <g transform="translate(370, 1375)">
+    <circle cx="55" cy="55" r="50" fill="none" stroke="#FFE500" stroke-width="4" />
+    <path d="M40,75 L55,25 L75,75 Z" fill="#1257C9" />
+    <circle cx="55" cy="55" r="8" fill="#FFE500" />
+    <text class="menlo-font" font-size="7" font-weight="700" fill="#081A42" text-anchor="middle" x="55" y="100">VELA LATINA</text>
+  </g>
+</svg>

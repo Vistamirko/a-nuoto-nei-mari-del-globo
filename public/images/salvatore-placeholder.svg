@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="azurePortraitBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0C4A6E" />
+    </linearGradient>
+
+    <radialGradient id="sunSpot" cx="70%" cy="25%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="1200" fill="url(#azurePortraitBg)" rx="16" />
+  <circle cx="630" cy="300" r="450" fill="url(#sunSpot)" />
+
+  <!-- Stylized Clean Portrait Silhouette of Salvatore Cimmino -->
+  <g transform="translate(180, 240)">
+    <!-- Shoulders and Torso -->
+    <path d="M-60,740 C-30,520 60,440 180,410 C290,390 400,410 520,440 C620,520 640,740 640,740 Z" fill="#0C4A6E" />
+    <path d="M-40,740 C-10,540 80,460 190,430 C290,410 390,430 500,460 C590,540 610,740 610,740 Z" fill="#075985" />
+
+    <!-- Neck -->
+    <path d="M210,340 L210,450 L350,450 L350,340 Z" fill="#F0F9FF" />
+    
+    <!-- Head in Sunlight -->
+    <ellipse cx="280" cy="250" rx="95" ry="120" fill="#FFFFFF" />
+    
+    <!-- Swim Cap -->
+    <path d="M185,230 C185,120 230,110 280,110 C335,110 375,120 375,230 C375,190 345,150 280,150 C215,150 185,190 185,230 Z" fill="#0284C7" />
+    <path d="M280,110 C335,110 375,120 375,230" stroke="#FFFFFF" stroke-width="4" fill="none" />
+
+    <!-- Goggles -->
+    <ellipse cx="245" cy="230" rx="26" ry="16" fill="#0C4A6E" stroke="#FFFFFF" stroke-width="3" />
+    <ellipse cx="315" cy="230" rx="26" ry="16" fill="#0C4A6E" stroke="#FFFFFF" stroke-width="3" />
+    <circle cx="250" cy="226" r="5" fill="#38BDF8" />
+    <circle cx="320" cy="226" r="5" fill="#38BDF8" />
+    
+    <!-- Resilient Smile -->
+    <path d="M255,320 Q285,338 315,320" stroke="#0284C7" stroke-width="4" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Clean Floating White Badge -->
+  <g transform="translate(60, 960)">
+    <rect width="780" height="170" rx="16" fill="#FFFFFF" fill-opacity="0.95" stroke="#0284C7" stroke-width="1.5" />
+    <text x="40" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" letter-spacing="3" fill="#0284C7">PROTAGONISTA DELL'IMPRESA</text>
+    <text x="40" y="105" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="36" font-weight="900" fill="#0C4A6E">SALVATORE CIMMINO</text>
+    <text x="40" y="140" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#0369A1">A Nuoto nei Mari del Globo · Tappa Campi Flegrei</text>
+  </g>
+</svg>

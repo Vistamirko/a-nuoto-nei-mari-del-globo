@@ -1,0 +1,119 @@
+@import url("https://use.typekit.net/gqr0pvc.css");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Kalam:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-macchia: "macchia", sans-serif;
+  --font-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-display: "macchia", sans-serif;
+  --font-handwriting: "Caveat", cursive, sans-serif;
+
+  /* Authentic Poster Visual Palette */
+  --poster-blue: #1257C9;
+  --poster-blue-dark: #0B45A8;
+  --poster-navy: #071A42;
+  --poster-midnight: #040F28;
+  --poster-green: #22E57A;
+  --poster-yellow: #FFE500;
+  --poster-white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #1257C9;
+  color: #FFFFFF;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #1257C9;
+  color: #FFFFFF;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings with Macchia (Font Urlato) */
+h1, h2, h3, h4, h5, h6, .font-macchia, .font-display {
+  font-family: "macchia", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  letter-spacing: -0.01em;
+}
+
+/* Font Scritto / Corsivo Calligrafico */
+.font-handwriting, .font-script, .font-scritto {
+  font-family: "Caveat", "Kalam", cursive, sans-serif !important;
+  font-style: normal !important;
+}
+
+/* Body / Text with Menlo */
+p:not(.font-handwriting):not(.font-script):not(.font-scritto):not(.font-macchia), 
+span:not(.font-handwriting):not(.font-script):not(.font-scritto):not(.font-macchia), 
+a, button, input, textarea, select, li, label, code, .font-mono, .font-sans {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+::selection {
+  background: #22E57A;
+  color: #071A42;
+}
+
+/* Custom Aquatic Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #071A42;
+}
+::-webkit-scrollbar-thumb {
+  background: #22E57A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFE500;
+}
+
+/* Poster Card Components */
+.poster-card {
+  background: rgba(7, 26, 66, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 36px -10px rgba(4, 15, 40, 0.5);
+}
+
+.poster-card-white {
+  background: #FFFFFF;
+  color: #071A42;
+  border: 2px solid #071A42;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.25);
+}
+
+.poster-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.poster-card-hover:hover {
+  border-color: #22E57A;
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px -12px rgba(34, 229, 122, 0.25);
+}
+
+/* Fluid Poster Typography */
+@layer utilities {
+  .text-fluid-giant {
+    font-size: clamp(3.2rem, 9vw, 8.5rem);
+    line-height: 0.88;
+    letter-spacing: -0.02em;
+  }
+  .text-fluid-headline {
+    font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+  }
+}
