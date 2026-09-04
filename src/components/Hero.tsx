@@ -102,7 +102,7 @@ export function Hero() {
                 <span className="w-3 h-3 rounded-full bg-[#22E57A] animate-pulse" />
               </div>
 
-              <div className="font-macchia text-5xl sm:text-6xl text-white tracking-tight leading-none">
+              <div className="font-macchia text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-none whitespace-nowrap">
                 3 OTTOBRE
               </div>
 

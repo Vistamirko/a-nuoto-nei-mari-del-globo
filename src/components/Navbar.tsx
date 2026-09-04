@@ -11,7 +11,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -31,36 +31,36 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#071A42]/95 backdrop-blur-md border-b border-white/20 py-3 shadow-xl shadow-black/20"
-          : "bg-gradient-to-b from-[#071A42]/80 to-transparent py-5"
+          ? "bg-[#071A42]/95 backdrop-blur-md border-b border-white/20 py-2.5 shadow-xl shadow-black/25"
+          : "bg-gradient-to-b from-[#071A42]/90 to-transparent py-4"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 lg:gap-6">
         {/* Brand */}
         <Link
           href="#top"
-          className="group flex items-center gap-3 focus:outline-none"
+          className="group flex items-center gap-2.5 shrink-0 focus:outline-none"
         >
-          <div className="w-10 h-10 rounded-xl bg-[#22E57A] flex items-center justify-center text-[#071A42] font-bold group-hover:bg-[#FFE500] transition-colors shadow-md">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#22E57A] flex items-center justify-center text-[#071A42] font-bold group-hover:bg-[#FFE500] transition-colors shadow-md shrink-0">
             <Waves className="w-5 h-5 text-[#071A42]" />
           </div>
-          <div className="flex flex-col">
-            <span className="font-macchia text-base sm:text-lg tracking-wide uppercase leading-tight text-white group-hover:text-[#FFE500] transition-colors">
+          <div className="flex flex-col whitespace-nowrap">
+            <span className="font-macchia text-sm sm:text-base lg:text-lg tracking-wide uppercase leading-none text-white group-hover:text-[#FFE500] transition-colors">
               A NUOTO NEI MARI DEL GLOBO
             </span>
-            <span className="font-mono text-[11px] font-bold tracking-wider uppercase text-[#22E57A]">
-              Salvatore Cimmino · Monte di Procida → Procida
+            <span className="font-mono text-[10px] sm:text-[11px] font-bold tracking-wider uppercase text-[#22E57A] mt-0.5">
+              Salvatore Cimmino · Tappa Flegrea
             </span>
           </div>
         </Link>
 
-        {/* Desktop Links */}
-        <nav className="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full bg-[#071A42]/80 border border-white/20 backdrop-blur-md">
+        {/* Desktop Links (lg and up to prevent tight crowding) */}
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-2 px-2.5 py-1 rounded-full bg-[#071A42]/85 border border-white/20 backdrop-blur-md shrink-0">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="font-mono text-xs lg:text-sm font-bold tracking-wide px-3.5 py-1.5 rounded-full text-white/90 hover:text-[#071A42] hover:bg-[#22E57A] transition-all"
+              className="font-mono text-xs xl:text-[13px] font-bold tracking-wide px-2.5 xl:px-3 py-1.5 rounded-full text-white/90 hover:text-[#071A42] hover:bg-[#22E57A] transition-all whitespace-nowrap"
             >
               {link.label}
             </Link>
@@ -68,21 +68,21 @@ export function Navbar() {
         </nav>
 
         {/* Date Action Pill */}
-        <div className="hidden lg:flex items-center">
+        <div className="hidden md:flex items-center shrink-0">
           <Link
             href="#countdown"
-            className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-wide uppercase text-[#071A42] bg-[#FFE500] hover:bg-yellow-300 px-4 py-2 rounded-full transition-all shadow-md hover:scale-105"
+            className="inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider uppercase text-[#071A42] bg-[#FFE500] hover:bg-yellow-300 px-3.5 py-2 rounded-full transition-all shadow-md hover:scale-105 whitespace-nowrap shrink-0"
           >
-            <Calendar className="w-3.5 h-3.5 text-[#071A42]" />
-            <span>3 OTTOBRE</span>
+            <Calendar className="w-3.5 h-3.5 text-[#071A42] shrink-0" />
+            <span className="whitespace-nowrap font-extrabold">3 OTTOBRE</span>
           </Link>
         </div>
 
-        {/* Mobile menu toggle */}
+        {/* Mobile / Tablet menu toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Chiudi menu" : "Apri menu"}
-          className="md:hidden p-2 rounded-xl border bg-[#071A42] text-white border-white/20 focus:outline-none"
+          className="lg:hidden p-2 rounded-xl border bg-[#071A42] text-white border-white/20 focus:outline-none shrink-0"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -90,7 +90,7 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#071A42]/98 backdrop-blur-xl border-b border-white/20 px-6 py-6 shadow-2xl transition-all">
+        <div className="lg:hidden bg-[#071A42]/98 backdrop-blur-xl border-b border-white/20 px-6 py-6 shadow-2xl transition-all">
           <div className="flex flex-col gap-3 font-mono">
             <span className="text-xs text-[#22E57A] font-bold tracking-wider uppercase pb-2 border-b border-white/10">
               Monte di Procida → Procida · 3 Ottobre
@@ -100,7 +100,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-bold text-white hover:text-[#FFE500] py-2 border-b border-white/10"
+                className="text-sm font-bold text-white hover:text-[#FFE500] py-2 border-b border-white/10 whitespace-nowrap"
               >
                 {link.label}
               </Link>
@@ -108,7 +108,7 @@ export function Navbar() {
             <Link
               href="#countdown"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-3 text-center text-xs font-bold uppercase text-[#071A42] bg-[#FFE500] py-3 rounded-xl shadow-md"
+              className="mt-3 text-center text-xs font-bold uppercase text-[#071A42] bg-[#FFE500] py-3 rounded-xl shadow-md whitespace-nowrap"
             >
               3 OTTOBRE · COUNTDOWN
             </Link>
