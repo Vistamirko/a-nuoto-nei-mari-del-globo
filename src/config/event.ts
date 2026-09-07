@@ -7,6 +7,7 @@ export interface BookItem {
   quote?: string;
   coverImage: string;
   buyUrl?: string;
+  buyLabel?: string;
 }
 
 export interface ProgramStep {
@@ -40,6 +41,9 @@ export interface PartnerItem {
   name: string;
   role: string;
   category: "istituzione" | "associazione" | "partner" | "media";
+  logo?: string;
+  url?: string;
+  detail?: string;
 }
 
 export interface EventConfig {
@@ -61,6 +65,7 @@ export interface EventConfig {
     weatherNotice: string;
     locationShort: string;
     locationFull: string;
+    motto: string;
   };
   salvatore: {
     name: string;
@@ -80,6 +85,7 @@ export interface EventConfig {
       description: string;
     }[];
     territoryInsight: string;
+    genesisStory: string;
   };
   route: {
     title: string;
@@ -112,79 +118,88 @@ export interface EventConfig {
   };
   partners: PartnerItem[];
   contact: {
-    email: string;
-    pressEmail: string;
-    social: {
-      instagram?: string;
-      facebook?: string;
-      youtube?: string;
-    };
+    persons: {
+      name: string;
+      role?: string;
+      phone: string;
+      phoneRaw: string;
+      email?: string;
+    }[];
+    socialChannels: {
+      name: string;
+      platform: "instagram" | "facebook";
+      url: string;
+      handle: string;
+    }[];
   };
 }
 
 export const eventConfig: EventConfig = {
   meta: {
     siteUrl: "https://a-nuoto-nei-mari-del-globo.vercel.app",
-    title: "La Tappa Flegrea · A Nuoto nei Mari del Globo con Salvatore Cimmino",
+    title: "A Nuoto nei Mari del Globo · Un'Impresa di Salvatore Cimmino (3 Ottobre 2026)",
     description:
-      "La tappa nei Campi Flegrei di 'A Nuoto nei Mari del Globo': Salvatore Cimmino nuota da Monte di Procida (Acquamorta) al giro di Procida. Resilienza, inclusione e scuole.",
-    ogImage: "/images/og-cover.svg",
+      "3 Ottobre 2026: Salvatore Cimmino nuota dalla Marina di Monte di Procida (Acquamorta) a Procida. Diritto allo studio per gli studenti con disabilità dei Campi Flegrei, per un mondo senza barriere e senza frontiere.",
+    ogImage: "/images/locandina-ufficiale.png",
   },
   event: {
     title: "A NUOTO NEI MARI DEL GLOBO",
-    tappaTitle: "CON SALVATORE CIMMINO",
-    subtitle: "DA MONTE DI PROCIDA A PROCIDA",
-    badge: "3 OTTOBRE · ACQUAMORTA (09:00) → PUNTA LINGUA (12:30)",
+    tappaTitle: "UN'IMPRESA DI SALVATORE CIMMINO",
+    subtitle: "DALLA MARINA DI MONTE DI PROCIDA A PROCIDA",
+    badge: "3 OTTOBRE 2026 · MARINA DI MONTE DI PROCIDA (09:00) → PROCIDA (12:30)",
     coordinates: "40°47′40″N 14°02′15″E",
     targetDate: "2026-10-03T09:00:00+02:00",
     isDateDefinitive: true,
-    dateLabel: "3 OTTOBRE · ACQUAMORTA ORE 09:00",
+    dateLabel: "3 OTTOBRE 2026 · ORE 09:00",
     weatherNotice: "La data e gli orari possono subire variazioni in base alle condizioni meteo-marine nel Canale di Procida.",
-    locationShort: "Acquamorta → Punta Lingua / Procida",
-    locationFull: "Acquamorta (Monte di Procida) · Canale e Periplo di Procida · Punta Lingua",
+    locationShort: "Marina di Monte di Procida → Procida",
+    locationFull: "Marina di Monte di Procida (Acquamorta) · Canale di Procida · Punta Lingua / Marina Grande",
+    motto: "PER UN MONDO SENZA BARRIERE E SENZA FRONTIERE",
   },
   salvatore: {
     name: "Salvatore Cimmino",
-    role: "Nuotatore per i Diritti Civili e l'Inclusione",
-    title: "LA STORIA DI SALVATORE",
+    role: "Nuotatore per i Diritti Civili & Ideatore dell'Impresa Mondiale",
+    title: "LA SFIDA DI SALVATORE",
     quoteLines: [
       "Una vita cambiata radicalmente.",
       "Una nuova strada da trovare.",
       "Un mare da attraversare.",
     ],
     bioParagraphs: [
-      "All'età di 15 anni, a causa di un osteosarcoma, Salvatore subisce l'amputazione della gamba destra. A 40 anni, dopo aver affrontato ulteriori interventi e senza aver mai nuotato prima, decide di iniziare a nuotare.",
-      "Con il progetto mondiale 'A Nuoto nei Mari del Globo', Salvatore compie traversate estreme in ogni continente per richiamare l'attenzione sui diritti delle persone con disabilità, sull'accessibilità e sull'inclusione.",
-      "La sua tappa nei Campi Flegrei porta questa testimonianza viva nel cuore del Mediterraneo: trasformare il cambiamento in una nuova possibilità.",
+      "All'età di 15 anni, a causa di un osteosarcoma, Salvatore subisce l'amputazione della gamba destra. A 40 anni, dopo aver affrontato ulteriori interventi e senza aver mai nuotato prima, decide di tuffarsi in acqua per trasformare la propria sfida personale in un impegno civile collettivo.",
+      "Con il progetto 'A nuoto nei mari del globo, per un mondo senza barriere e senza frontiere', Salvatore compie imprese estreme in tutto il mondo per denunciare le barriere architettoniche, culturali e tecnologiche, chiedendo ausili all'avanguardia e parità di diritti.",
+      "Il 3 ottobre 2026 porta questa testimonianza nei Campi Flegrei: una traversata dalla Marina di Monte di Procida a Procida per difendere il diritto allo studio degli alunni con disabilità del territorio flegreo colpito dal terremoto e dal bradisismo.",
     ],
     keyMessage:
-      "Il mio nuoto non è una ricerca di record, ma un ponte tra le persone per dare voce a chi non viene ascoltato.",
+      "La disabilità non può essere confinata a una dimensione privata o familiare, ma deve essere riconosciuta come una sfida che interroga l'intera collettività.",
     imageSrc: "/images/salvatore-cimmino-600x800.jpg",
   },
   initiative: {
-    title: "L'EVENTO NEI CAMPI FLEGREI",
-    subtitle: "La Tappa Flegrea del Progetto Mondiale",
+    title: "L'EMERGENZA SOCIALE & IL CAMBIO DI PARADIGMA",
+    subtitle: "Dedicato agli studenti e alle studentesse con disabilità dei Campi Flegrei",
     intro:
-      "La tappa flegrea di “A Nuoto nei Mari del Globo” nasce dall’incontro con Salvatore Cimmino e porta nei Campi Flegrei la sua storia, la sua esperienza e la sua traversata.",
+      "Una sfida non solo fisica, ma soprattutto culturale e organizzativa nata per accendere i riflettori su un'emergenza vicinissima: garantire il diritto allo studio e abbattere ogni barriera per le nuove generazioni flegree.",
     coreThemes: [
       {
-        title: "Disabilità & Diritti",
+        title: "Diritto allo Studio & Emergenza Scuole",
         description:
-          "Sensibilizzare istituzioni e cittadini sull'abbattimento delle barriere e sull'accesso universale alle tecnologie assistive e agli spazi pubblici.",
+          "Con l'inizio dell'anno scolastico, moltissimi alunni delle comunità flegree più colpite dalle scosse del terremoto affrontano gravi difficoltà per i danni e le inagibilità degli edifici scolastici. Le barriere logistiche rischiano di trasformarsi in una vera e propria esclusione dallo studio.",
       },
       {
-        title: "Inclusione & Scuole",
+        title: "Cambio di Paradigma",
         description:
-          "Un percorso formativo ed educativo dedicato agli studenti attraverso tre libri tematici e il confronto diretto con gli autori.",
+          "La disabilità non può più essere confinata a una dimensione privata o familiare, ma deve essere riconosciuta come una sfida e una responsabilità etica che interroga e mobilita l'intera collettività.",
       },
       {
-        title: "Resilienza & Bradisismo",
+        title: "Senza Barriere né Frontiere",
         description:
-          "Il territorio e il bradisismo diventano parte del racconto: due esperienze diverse unite dalla necessità di adattarsi e trovare nuovi equilibri.",
+          "Il mare come elemento universale che unisce: la traversata tra terraferma e isola diventa il simbolo concreto dell'abbattimento di ogni ostacolo fisico, sociale e culturale.",
       },
     ],
     territoryInsight:
-      "Il territorio e il bradisismo diventano parte del racconto: due esperienze diverse, quella personale di Salvatore e quella collettiva di una comunità che vive un territorio in continuo cambiamento, unite dalla necessità di adattarsi e trovare nuovi equilibri.",
+      "Nelle comunità flegree ferite dagli eventi sismici e dal bradisismo, l'inagibilità delle strutture scolastiche aggrava ulteriormente la condizione degli alunni con disabilità. Questa iniziativa nasce per dare voce a loro e alle loro famiglie, affinché la ricostruzione e l'adeguamento degli spazi educativi siano prioritari, inclusivi e senza barriere.",
+    genesisStory:
+      "L'evento nasce dagli incontri al 'Piccolo Museo del Mare' di Monte di Procida: prima con Salvatore Cimmino per la presentazione di 'Disabilità Controcorrente', poi con Mirko Vista e il suo libro 'Io Respiro Mare - Storia di un cambiamento', che attraverso un percorso di trasformazione interiore racconta un'analoga esperienza a nuoto tra Monte di Procida e Procida. Da qui la sinergia spontanea tra Vela Latina Monte di Procida, Laboratorio Cumano e Io Respiro Mare per realizzare insieme questa storica impresa.",
   },
   route: {
     title: "IL PERCORSO DELLA TAPPA",
@@ -192,35 +207,35 @@ export const eventConfig: EventConfig = {
     stages: [
       {
         number: "01",
-        name: "ACQUAMORTA",
-        subtitle: "Monte di Procida · Partenza",
+        name: "MARINA DI MONTE DI PROCIDA",
+        subtitle: "Acquamorta · Partenza Ore 09:00",
         description:
-          "Il molo di Acquamorta abbraccia Salvatore con il saluto della comunità prima della partenza della traversata.",
-        highlight: "Punto di Partenza",
+          "Presidio del Comitato di Accoglienza al molo di Acquamorta, raduno della comunità flegrea e delle scuole, saluto inaugurale e tuffo di Salvatore Cimmino per l'avvio della traversata.",
+        highlight: "Comitato di Accoglienza",
       },
       {
         number: "02",
-        name: "GIRO DI PROCIDA",
-        subtitle: "Periplo a Nuoto dell'Isola",
+        name: "CANALE & PERIPLO DI PROCIDA",
+        subtitle: "Traversata a Nuoto & Scorta in Vela Latina",
         description:
-          "La sfida a bracciate nel cuore del Canale di Procida e lungo il perimetro dell'isola vulcanica tra scogliere e tufo.",
+          "La sfida a bracciate nelle correnti del Canale di Procida e lungo la costa dell'isola vulcanica, scortato dalle storiche imbarcazioni tradizionali a Vela Latina.",
         highlight: "Traversata a Nuoto",
       },
       {
         number: "03",
-        name: "PROCIDA",
-        subtitle: "Arrivo in Piazza · Festa della Comunità",
+        name: "APPRODO A PROCIDA",
+        subtitle: "Punta Lingua / Marina Grande · Ore 12:30",
         description:
-          "L'approdo sull'isola, l'accoglienza in piazza con la cittadinanza, gli studenti e le istituzioni per celebrare insieme il valore dell'impresa.",
-        highlight: "Traguardo & Festa",
+          "Accoglienza ufficiale del Comitato di Arrivo sull'isola: abbraccio delle comunità di Procida e Monte di Procida, con studenti, cittadini e le Istituzioni dei due Comuni.",
+        highlight: "Comitato di Arrivo",
       },
     ],
   },
   books: {
     title: "LE SCUOLE E I TRE LIBRI",
-    subtitle: "Tre prospettive differenti che si incontrano nella tappa flegrea",
+    subtitle: "Tre prospettive, un unico messaggio di riscatto, territorio e libertà",
     description:
-      "Il progetto coinvolgerà la letteratura attraverso tre libri per dialogare con gli studenti e le nuove generazioni.",
+      "Un breve e incisivo momento di incontro e presentazione dei tre libri con gli autori, per dialogare con gli studenti sui temi del diritto allo studio, del cambiamento personale e dell'identità flegrea.",
     items: [
       {
         id: "disabilita-controcorrente",
@@ -228,87 +243,92 @@ export const eventConfig: EventConfig = {
         author: "Salvatore Cimmino",
         theme: "DISABILITÀ",
         description:
-          "La testimonianza diretta di Salvatore: trasformare la malattia e l'amputazione in un impegno civile globale per i diritti e la dignità.",
-        quote: "Il mare mi ha ridato la libertà di muovermi senza confini.",
-        coverImage: "/images/books/disabilita-controcorrente.svg",
+          "L’Accessibilità Universale non è una tendenza, ma un diritto fondamentale che riguarda la qualità della vita dell’intera comunità. Spazi pubblici, scuole, case e mobilità devono essere accessibili per realizzare il Diritto di Cittadinanza (Art. 3 e 32 Cost.). Rimuovere le barriere materiali e immateriali difende l'inclusione di tutti: autonomia significa integrarsi, chiedere e dare aiuto.",
+        quote: "L’Accessibilità Universale non è un concetto di tendenza, ma un diritto fondamentale per l’intera comunità.",
+        coverImage: "/images/books/disabilita-controcorrente.jpeg",
+        buyUrl: "https://www.amazon.it/dp/B0D5KQTB5F",
+        buyLabel: "DISPONIBILE SU AMAZON ↗",
+      },
+      {
+        id: "io-respiro-mare",
+        title: "IO RESPIRO MARE - STORIA DI UN CAMBIAMENTO",
+        author: "Mirko Vista",
+        theme: "MARE",
+        description:
+          "La storia di un cambiamento profondo: un viaggio interiore e di trasformazione personale in cui il mare diventa respiro, rinascita e forza per ridisegnare la propria vita, con all'interno l'esperienza a nuoto da Monte di Procida a Procida.",
+        quote: "Dentro ogni bracciata c'è la forza di cambiare la rotta della nostra vita.",
+        coverImage: "/images/cover-io-respiro-mare-800.webp",
+        buyUrl: "https://www.amazon.it/dp/B0FXS6DJ8G",
+        buyLabel: "DISPONIBILE SU AMAZON ↗",
       },
       {
         id: "procida-non-deve-morire",
         title: "#PROCIDANONDEVEMORIRE",
-        author: "Bruno",
+        author: "Ciro Bruno Linardo",
         theme: "TERRITORIO",
         description:
-          "Un grido di passione e difesa per l'isola di Procida e la terra flegrea. Radici, identità e memoria di una comunità fiera.",
-        quote: "Custodire il territorio significa proteggere l'anima di chi lo abita.",
-        coverImage: "/images/books/procidanondevemorire.svg",
-      },
-      {
-        id: "io-respiro-mare",
-        title: "IO RESPIRO MARE",
-        author: "Mirko",
-        theme: "MARE",
-        description:
-          "Il mare come elemento rigenerante e vitale in cui perdersi per ritrovarsi. Un viaggio intimo nel rapporto ancestrale tra uomo e acqua.",
-        quote: "Dentro ogni onda c'è il ritmo del nostro stesso respiro.",
-        coverImage: "/images/cover-io-respiro-mare-800.webp",
-        buyUrl: "https://www.amazon.it/dp/B0FXS6DJ8G",
+          "Un romanzo che crea un ponte tra due mondi e culture diverse: la piccola isola di Procida e l’immenso deserto del Sahara. Il racconto pone l’attenzione sulla causa saharawi, l’esilio forzato di un popolo estromesso dalla propria terra dall'occupazione militare che chiede solo di farvi ritorno. Una parte dei proventi è destinata a sostenere il fiero popolo saharawi.",
+        quote: "Un ponte tra l'isola di Procida e il deserto del Sahara, a sostegno del popolo saharawi.",
+        coverImage: "/images/books/procidanondevemorire.jpeg",
+        buyUrl: "https://www.edizionimea.it/product/procidanondevemorire/",
+        buyLabel: "DISPONIBILE SU EDIZIONI MEA ↗",
       },
     ],
   },
   program: {
-    title: "PROGRAMMA DELLA TAPPA",
-    subtitle: "Una giornata di sport, cultura, territorio e inclusione",
-    note: "Gli orari precisi e i dettagli della giornata saranno confermati a ridosso dell'evento.",
+    title: "PROGRAMMA DELLA GIORNATA",
+    subtitle: "Sabato 3 Ottobre 2026 · Sport, inclusione civile e comunità",
+    note: "Gli orari precisi e lo svolgimento della traversata sono subordinati alle condizioni meteo-marine nel Canale di Procida.",
     steps: [
       {
         id: "scuole",
-        time: "Mattina pre-evento",
+        time: "Incontro Scuole",
         phase: "Fase 01",
-        title: "INCONTRO CON LE SCUOLE",
-        location: "Scuole dei Campi Flegrei e Procida",
+        title: "BREVE PRESENTAZIONE DEI TRE LIBRI CON GLI AUTORI",
+        location: "Istituti Scolastici dei Campi Flegrei e Procida",
         description:
-          "Incontri e testimonianze dedicati a disabilità, inclusione, resilienza, mare e territorio con gli autori dei tre libri.",
+          "Breve incontro con gli studenti sui temi dell'emergenza post-sisma, del diritto allo studio e dell'inclusione, con una concisa presentazione dei tre libri insieme agli autori.",
         iconType: "school",
       },
       {
         id: "partenza",
-        time: "Ore 08:30 (indicativo)",
+        time: "Ore 09:00",
         phase: "Fase 02",
-        title: "PARTENZA DA ACQUAMORTA",
-        location: "Acquamorta · Monte di Procida",
+        title: "COMITATO DI ACCOGLIENZA & PARTENZA",
+        location: "Molo di Acquamorta · Marina di Monte di Procida",
         description:
-          "Saluto inaugurale della comunità flegrea e tuffo di Salvatore Cimmino per l'inizio della traversata.",
+          "Presidio del Comitato di Accoglienza ad Acquamorta: saluto istituzionale dei Sindaci, raduno della cittadinanza e tuffo inaugurale di Salvatore Cimmino.",
         iconType: "flag",
       },
       {
         id: "traversata",
-        time: "Mattina / Pomeriggio",
+        time: "Mattina",
         phase: "Fase 03",
-        title: "TRAVERSATA & GIRO DI PROCIDA",
-        location: "Canale di Procida & Costa isolana",
+        title: "TRAVERSATA & SCORTA VELA LATINA",
+        location: "Canale di Procida & Coste dell'Isola",
         description:
-          "La traversata a nuoto scortata dalle barche di sicurezza, circoli nautici e imbarcazioni della comunità.",
+          "La traversata a nuoto scortata dalla flotta tradizionale dell'Associazione Vela Latina Monte di Procida e dalle unità di sicurezza in mare.",
         iconType: "waves",
       },
       {
         id: "arrivo",
-        time: "Pomeriggio",
+        time: "Ore 12:30 circa",
         phase: "Fase 04",
-        title: "ARRIVO A PROCIDA IN PIAZZA",
-        location: "Procida · Piazza Marina Grande",
+        title: "COMITATO DI ARRIVO & CELEBRAZIONE A PROCIDA",
+        location: "Punta Lingua / Piazza Marina Grande · Procida",
         description:
-          "Sbarco di Salvatore, incontro pubblico in piazza con i cittadini, gli studenti, le associazioni e le istituzioni.",
+          "Accoglienza da parte del Comitato di Arrivo: sbarco di Salvatore Cimmino, abbraccio della comunità isolana e incontro pubblico con studenti, associazioni e rappresentanti istituzionali.",
         iconType: "map-pin",
       },
     ],
   },
   poster: {
-    title: "LOCANDINA UFFICIALE DELLA TAPPA",
-    subtitle: "Il manifesto visivo dell'evento nei Campi Flegrei",
+    title: "LOCANDINA UFFICIALE DELL'IMPRESA",
+    subtitle: "Il manifesto dell'evento flegreo per un mondo senza barriere e senza frontiere",
     description:
-      "La locandina ufficiale della tappa flegrea di 'A Nuoto nei Mari del Globo'. Clicca per visualizzare l'anteprima o scaricare l'immagine.",
-    imageSrc: "/images/poster-placeholder.svg",
-    downloadUrl: "#",
+      "La locandina ufficiale dell'evento del 3 Ottobre 2026: scarica il manifesto per diffondere l'iniziativa e supportare la causa degli studenti con disabilità dei Campi Flegrei.",
+    imageSrc: "/images/locandina-ufficiale.png",
+    downloadUrl: "/images/locandina-ufficiale.png",
   },
   gallery: {
     title: "FOTO DELLA TAPPA E DEL MARE",
@@ -324,8 +344,8 @@ export const eventConfig: EventConfig = {
       },
       {
         id: "2",
-        title: "Partenza ad Acquamorta",
-        subtitle: "Monte di Procida prima del tuffo",
+        title: "Marina di Monte di Procida",
+        subtitle: "Acquamorta prima della partenza",
         aspect: "portrait",
         imageSrc: "/images/gallery/acquamorta.svg",
         alt: "Acquamorta Monte di Procida",
@@ -356,7 +376,7 @@ export const eventConfig: EventConfig = {
       },
       {
         id: "6",
-        title: "L'Arrivo e la Festa in Piazza",
+        title: "L'Arrivo e la Comunità",
         subtitle: "L'abbraccio di Procida",
         aspect: "wide",
         imageSrc: "/images/gallery/arrival.svg",
@@ -365,20 +385,87 @@ export const eventConfig: EventConfig = {
     ],
   },
   partners: [
-    { name: "Comune di Monte di Procida", role: "Patrocinio Istituzionale", category: "istituzione" },
-    { name: "Comune di Procida", role: "Patrocinio Istituzionale", category: "istituzione" },
-    { name: "A Nuoto nei Mari del Globo", role: "Progetto Mondiale", category: "associazione" },
-    { name: "Comunità Flegrea & Associazioni", role: "Supporto Territoriale", category: "associazione" },
-    { name: "Circoli Nautici & Soccorso in Mare", role: "Sicurezza & Logistica Navale", category: "partner" },
-    { name: "Istituti Scolastici Campi Flegrei e Procida", role: "Partner Educativo", category: "partner" },
+    {
+      name: "Comune di Monte di Procida",
+      role: "Con il Patrocinio Morale",
+      category: "istituzione",
+      logo: "/images/logos/logo-comune-monte-di-procida.webp",
+      url: "https://www.comune.montediprocida.na.it/",
+      detail: "Sindaco Dott. Salvatore Scotto di Santolo",
+    },
+    {
+      name: "Comune di Procida",
+      role: "Con il Patrocinio Morale",
+      category: "istituzione",
+      logo: "/images/logos/logo-comune-procida.webp",
+      url: "https://www.comune.procida.na.it/",
+      detail: "Sindaco Avv. Luigi Muro",
+    },
+    {
+      name: "Associazione Vela Latina Monte di Procida",
+      role: "Organizzazione & Sede Piccolo Museo del Mare",
+      category: "associazione",
+      logo: "/images/logos/logo-vela-latina.webp",
+      url: "https://www.instagram.com/velalatinamontediprocida/",
+      detail: "Pres. Antonio Pugliese",
+    },
+    {
+      name: "Associazione Laboratorio Cumano",
+      role: "Promotore Ispiratore & Culturale",
+      category: "associazione",
+      logo: "/images/logos/logo-laboratorio-cumano.webp",
+      url: "https://www.facebook.com/profile.php?id=100080139925321",
+    },
+    {
+      name: "Io Respiro Mare (Mirko Vista)",
+      role: "Coordinamento Organizzativo & Traversata",
+      category: "associazione",
+      logo: "/images/logos/logo-io-respiro-mare.svg",
+      url: "https://www.instagram.com/iorespiromare/",
+      detail: "Autore & Testimonianza",
+    },
+    {
+      name: "Istituti Scolastici Campi Flegrei e Procida",
+      role: "Comunità Educativa & Studenti con Disabilità",
+      category: "partner",
+      detail: "Sensibilizzazione e incontri sui libri con gli autori",
+    },
   ],
   contact: {
-    email: "info@anuotoneimaridelglobo.it",
-    pressEmail: "stampa@anuotoneimaridelglobo.it",
-    social: {
-      instagram: "https://instagram.com",
-      facebook: "https://facebook.com",
-      youtube: "https://youtube.com",
-    },
+    persons: [
+      {
+        name: "Mirko Vista",
+        role: "Coordinamento Organizzativo",
+        phone: "+39 329 016 0806",
+        phoneRaw: "+393290160806",
+        email: "vistamirko@gmail.com",
+      },
+      {
+        name: "Michele Petrone",
+        role: "Organizzazione & Territorio",
+        phone: "+39 335 809 0041",
+        phoneRaw: "+393358090041",
+      },
+    ],
+    socialChannels: [
+      {
+        name: "Io Respiro Mare",
+        platform: "instagram",
+        url: "https://www.instagram.com/iorespiromare/",
+        handle: "@iorespiromare",
+      },
+      {
+        name: "Vela Latina Monte di Procida",
+        platform: "instagram",
+        url: "https://www.instagram.com/velalatinamontediprocida/",
+        handle: "@velalatinamontediprocida",
+      },
+      {
+        name: "Associazione Laboratorio Cumano",
+        platform: "facebook",
+        url: "https://www.facebook.com/profile.php?id=100080139925321",
+        handle: "Laboratorio Cumano",
+      },
+    ],
   },
 };

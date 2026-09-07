@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Award, Heart, Sparkles, Quote } from "lucide-react";
+import { Award, Sparkles, Quote, Globe, Waves } from "lucide-react";
 import { eventConfig } from "@/config/event";
 
 export function Salvatore() {
@@ -30,7 +30,7 @@ export function Salvatore() {
               {/* Floating Badge */}
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#071A42]/95 border border-[#22E57A]/40 backdrop-blur-md shadow-xl">
                 <span className="text-[11px] font-mono font-bold text-[#22E57A] uppercase tracking-wider block mb-0.5">
-                  Testimonianza Civile
+                  Testimonianza &middot; Impresa Mondiale
                 </span>
                 <p className="text-base font-macchia text-white uppercase leading-tight">
                   {eventConfig.salvatore.name}
@@ -45,8 +45,8 @@ export function Salvatore() {
           {/* Biography & Key Message */}
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#FFE500] text-xs font-mono font-bold uppercase tracking-wider border border-[#FFE500]/40">
-              <Award className="w-3.5 h-3.5 text-[#FFE500]" />
-              <span>IL PROTAGONISTA</span>
+              <Globe className="w-3.5 h-3.5 text-[#FFE500]" />
+              <span>A NUOTO NEI MARI DEL GLOBO</span>
             </div>
 
             <h2 className="text-fluid-headline font-macchia text-white tracking-tight uppercase">

@@ -68,7 +68,7 @@ export function Countdown() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#22E57A] text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-[#22E57A]/40">
             <span className="w-2 h-2 rounded-full bg-[#22E57A] animate-ping" />
             <Timer className="w-3.5 h-3.5 text-[#22E57A]" />
-            <span>COUNTDOWN UFFICIALE · 3 OTTOBRE</span>
+            <span>DATA CONFERMATA ...PER ORA · COUNTDOWN</span>
           </div>
 
           <h2 className="text-fluid-headline font-macchia text-white tracking-tight uppercase">

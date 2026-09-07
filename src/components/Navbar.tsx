@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Waves, Calendar } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, Calendar } from "lucide-react";
 import { eventConfig } from "@/config/event";
 
 export function Navbar() {
@@ -40,8 +41,13 @@ export function Navbar() {
           href="#top"
           className="group flex items-center gap-2.5 shrink-0 focus:outline-none"
         >
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#22E57A] flex items-center justify-center text-[#071A42] font-bold group-hover:bg-[#FFE500] transition-colors shadow-md shrink-0">
-            <Waves className="w-5 h-5 text-[#071A42]" />
+          <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-white shadow-md shrink-0 border border-white/40 p-0.5 group-hover:scale-105 transition-transform">
+            <Image
+              src="/images/logo.jpeg"
+              alt="Logo A Nuoto Nei Mari Del Globo"
+              fill
+              className="object-contain"
+            />
           </div>
           <div className="flex flex-col whitespace-nowrap">
             <span className="font-macchia text-sm sm:text-base lg:text-lg tracking-wide uppercase leading-none text-white group-hover:text-[#FFE500] transition-colors">

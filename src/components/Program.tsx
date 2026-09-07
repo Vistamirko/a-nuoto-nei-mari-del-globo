@@ -1,48 +1,11 @@
 "use client";
 
 import React from "react";
-import { Clock, MapPin, School, Flag, Waves, Sparkles, Calendar } from "lucide-react";
+import { Flag, Waves, Sparkles, Calendar, School, Users, UserCheck } from "lucide-react";
 import { eventConfig } from "@/config/event";
 
 export function Program() {
-  const steps = [
-    {
-      id: "scuole",
-      time: "Pre-evento / Mattina",
-      phase: "FASE 01",
-      title: "INCONTRO CON LE SCUOLE",
-      location: "Scuole dei Campi Flegrei & Procida",
-      description: "Dialogo con gli studenti sui tre libri, su disabilità, resilienza e amore per il mare.",
-      icon: School,
-    },
-    {
-      id: "partenza",
-      time: "Ore 09:00",
-      phase: "FASE 02",
-      title: "PARTENZA DA ACQUAMORTA",
-      location: "Acquamorta · Monte di Procida",
-      description: "Saluto inaugurale della comunità flegrea e tuffo di Salvatore Cimmino per la traversata.",
-      icon: Flag,
-    },
-    {
-      id: "traversata",
-      time: "Mattina",
-      phase: "FASE 03",
-      title: "TRAVERSATA & GIRO DI PROCIDA",
-      location: "Canale di Procida & Costa dell'Isola",
-      description: "A nuoto scortati dalle imbarcazioni in Vela Latina, circoli nautici e sicurezza.",
-      icon: Waves,
-    },
-    {
-      id: "arrivo",
-      time: "Ore 12:30 circa",
-      phase: "FASE 04",
-      title: "ARRIVO A PUNTA LINGUA / PROCIDA",
-      location: "Punta Lingua · Procida",
-      description: "Traguardo, accoglienza della cittadinanza e celebrazione in piazza con le istituzioni.",
-      icon: Sparkles,
-    },
-  ];
+  const stepIcons = [School, Users, Waves, UserCheck];
 
   return (
     <section
@@ -54,22 +17,22 @@ export function Program() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#071A42] text-[#22E57A] text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-[#22E57A]/40 shadow-sm">
             <Calendar className="w-3.5 h-3.5 text-[#22E57A]" />
-            <span>SABATO 3 OTTOBRE</span>
+            <span>SABATO 3 OTTOBRE 2026</span>
           </div>
 
           <h2 className="text-fluid-headline font-macchia text-white tracking-tight uppercase">
-            PROGRAMMA DELLA GIORNATA
+            {eventConfig.program.title}
           </h2>
 
-          <p className="mt-3 font-mono text-xs sm:text-sm text-white/80 max-w-xl mx-auto">
-            Una grande giornata di sport, letteratura, territorio e inclusione nei Campi Flegrei.
+          <p className="mt-3 font-mono text-xs sm:text-sm text-[#FFE500] font-bold uppercase tracking-wider max-w-xl mx-auto">
+            {eventConfig.program.subtitle}
           </p>
         </div>
 
         {/* Steps Timeline */}
         <div className="space-y-6">
-          {steps.map((step, index) => {
-            const Icon = step.icon;
+          {eventConfig.program.steps.map((step, index) => {
+            const Icon = stepIcons[index % stepIcons.length];
             return (
               <div
                 key={step.id}
@@ -119,7 +82,7 @@ export function Program() {
             * AVVISO CONDIZIONI METEO-MARINE
           </p>
           <p className="text-white/80 max-w-2xl mx-auto">
-            La data del 3 Ottobre e i relativi orari della traversata possono subire variazioni o adattamenti in base alle condizioni del vento, del moto ondoso e delle correnti nel Canale di Procida.
+            {eventConfig.program.note}
           </p>
         </div>
       </div>

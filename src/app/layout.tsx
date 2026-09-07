@@ -1,55 +1,111 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { eventConfig } from "@/config/event";
 import "./globals.css";
 
+export const viewport: Viewport = {
+  themeColor: "#1257C9",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: eventConfig.meta.title,
-  description: eventConfig.meta.description,
   metadataBase: new URL(eventConfig.meta.siteUrl),
+  title: {
+    default: "A Nuoto nei Mari del Globo · Salvatore Cimmino (3 Ottobre 2026)",
+    template: "%s | A Nuoto nei Mari del Globo",
+  },
+  description: eventConfig.meta.description,
+  applicationName: "A Nuoto nei Mari del Globo",
+  authors: [
+    { name: "Salvatore Cimmino" },
+    { name: "Vela Latina Monte di Procida" },
+    { name: "Laboratorio Cumano" },
+    { name: "Mirko Vista (Io Respiro Mare)" },
+  ],
+  creator: "Salvatore Cimmino",
+  publisher: "Associazione Vela Latina Monte di Procida",
   keywords: [
     "Salvatore Cimmino",
     "A Nuoto nei Mari del Globo",
+    "3 Ottobre 2026",
     "Campi Flegrei",
     "Monte di Procida",
-    "Procida",
+    "Marina di Monte di Procida",
     "Acquamorta",
+    "Procida",
+    "Canale di Procida",
+    "Punta Lingua",
     "Traversata a nuoto",
-    "Disabilità e inclusione",
-    "Bradisismo",
-    "Resilienza",
+    "Disabilità",
+    "Inclusione",
+    "Diritto allo studio",
+    "Scuole Campi Flegrei",
+    "Emergenza sisma bradisismo",
+    "Accessibilità Universale",
+    "Vela Latina Monte di Procida",
+    "Piccolo Museo del Mare",
+    "Laboratorio Cumano",
+    "Mirko Vista",
+    "Io Respiro Mare",
+    "Storia di un cambiamento",
     "Disabilità Controcorrente",
-    "#PROCIDANONDEVEMORIRE",
-    "IO RESPIRO MARE",
+    "Ciro Bruno Linardo",
+    "#ProcidaNonDeveMorire",
+    "Per un mondo senza barriere e senza frontiere",
   ],
-  authors: [{ name: "A Nuoto nei Mari del Globo" }],
-  creator: "Salvatore Cimmino",
-  publisher: "Comunità Flegrea",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "it_IT",
-    url: eventConfig.meta.siteUrl,
-    title: eventConfig.meta.title,
-    description: eventConfig.meta.description,
+    url: "/",
     siteName: "A Nuoto nei Mari del Globo",
+    title: "A Nuoto nei Mari del Globo · Un'Impresa di Salvatore Cimmino (3 Ottobre 2026)",
+    description:
+      "Sabato 3 Ottobre 2026: Salvatore Cimmino nuota dalla Marina di Monte di Procida a Procida per il diritto allo studio degli studenti con disabilità nei Campi Flegrei.",
     images: [
       {
-        url: "/images/og-cover.svg",
-        width: 1200,
-        height: 630,
-        alt: "A Nuoto nei Mari del Globo · Salvatore Cimmino nei Campi Flegrei",
+        url: "/images/locandina-ufficiale.png",
+        width: 1000,
+        height: 1270,
+        alt: "Locandina Ufficiale · A Nuoto nei Mari del Globo con Salvatore Cimmino",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: eventConfig.meta.title,
-    description: eventConfig.meta.description,
-    images: ["/images/og-cover.svg"],
+    title: "A Nuoto nei Mari del Globo · Un'Impresa di Salvatore Cimmino (3 Ottobre 2026)",
+    description:
+      "Dalla Marina di Monte di Procida a Procida: la traversata di Salvatore Cimmino per gli studenti con disabilità dei Campi Flegrei.",
+    images: ["/images/locandina-ufficiale.png"],
   },
   icons: {
-    icon: "/images/hero-placeholder.svg",
-    apple: "/images/hero-placeholder.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "Sports & Social Impact",
 };
 
 export default function RootLayout({
@@ -59,32 +115,77 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Event",
-    name: eventConfig.event.title + " · " + eventConfig.event.subtitle,
-    description: eventConfig.meta.description,
-    startDate: eventConfig.event.targetDate,
-    eventStatus: "https://schema.org/EventScheduled",
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    location: {
-      "@type": "Place",
-      name: eventConfig.event.locationFull,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Monte di Procida / Procida",
-        addressRegion: "Napoli",
-        addressCountry: "IT",
+    "@graph": [
+      {
+        "@type": "Event",
+        "@id": `${eventConfig.meta.siteUrl}/#event`,
+        name: "A Nuoto nei Mari del Globo · Un'Impresa di Salvatore Cimmino",
+        description: eventConfig.meta.description,
+        startDate: eventConfig.event.targetDate,
+        endDate: "2026-10-03T13:30:00+02:00",
+        eventStatus: "https://schema.org/EventScheduled",
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        image: [`${eventConfig.meta.siteUrl}/images/locandina-ufficiale.png`],
+        isAccessibleForFree: true,
+        location: {
+          "@type": "Place",
+          name: "Marina di Monte di Procida (Acquamorta) → Procida (Punta Lingua)",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Monte di Procida / Procida",
+            addressRegion: "Napoli",
+            postalCode: "80070",
+            addressCountry: "IT",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 40.7944,
+            longitude: 14.0375,
+          },
+        },
+        performer: {
+          "@type": "Person",
+          name: eventConfig.salvatore.name,
+          jobTitle: eventConfig.salvatore.role,
+          url: `${eventConfig.meta.siteUrl}/#salvatore`,
+        },
+        organizer: [
+          {
+            "@type": "Organization",
+            name: "Associazione Vela Latina Monte di Procida",
+            url: "https://www.instagram.com/velalatinamontediprocida/",
+          },
+          {
+            "@type": "Organization",
+            name: "Associazione Culturale Laboratorio Cumano",
+            url: "https://www.facebook.com/profile.php?id=100080139925321",
+          },
+          {
+            "@type": "Organization",
+            name: "Io Respiro Mare",
+            url: "https://www.instagram.com/iorespiromare/",
+          },
+        ],
+        about: [
+          {
+            "@type": "Thing",
+            name: "Diritto allo studio per studenti con disabilità nei Campi Flegrei",
+          },
+          {
+            "@type": "Thing",
+            name: "Accessibilità Universale e inclusione",
+          },
+        ],
       },
-    },
-    performer: {
-      "@type": "Person",
-      name: eventConfig.salvatore.name,
-      jobTitle: eventConfig.salvatore.role,
-    },
-    organizer: {
-      "@type": "Organization",
-      name: "A Nuoto nei Mari del Globo",
-      url: eventConfig.meta.siteUrl,
-    },
+      {
+        "@type": "WebSite",
+        "@id": `${eventConfig.meta.siteUrl}/#website`,
+        url: eventConfig.meta.siteUrl,
+        name: "A Nuoto nei Mari del Globo",
+        description: eventConfig.meta.description,
+        inLanguage: "it-IT",
+      },
+    ],
   };
 
   return (

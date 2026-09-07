@@ -18,7 +18,7 @@ export function OfficialPoster() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#FFE500] text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-[#FFE500]/40">
             <ImageIcon className="w-3.5 h-3.5 text-[#FFE500]" />
-            <span>MANIFESTO VISIVO</span>
+            <span>MANIFESTO VISIVO DELL&apos;INIZIATIVA</span>
           </div>
 
           <h2 className="text-fluid-headline font-macchia text-white tracking-tight uppercase">
@@ -41,7 +41,7 @@ export function OfficialPoster() {
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <Image
                   src={eventConfig.poster.imageSrc}
-                  alt="Locandina Ufficiale dell'evento nei Campi Flegrei"
+                  alt="Locandina Ufficiale dell'impresa di Salvatore Cimmino"
                   fill
                   className="object-contain group-hover:scale-105 transition-transform duration-500"
                 />
@@ -65,25 +65,28 @@ export function OfficialPoster() {
             <div className="p-8 rounded-3xl bg-[#1257C9] border-2 border-white/20 shadow-2xl space-y-5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#071A42] text-[#22E57A] text-xs font-bold uppercase">
                 <Sparkles className="w-3.5 h-3.5 text-[#22E57A]" />
-                <span>Pronta per stampa &amp; diffusione</span>
+                <span>3 Ottobre 2026 · Campi Flegrei</span>
               </div>
 
               <h3 className="text-2xl font-macchia text-white uppercase leading-tight">
-                IL MANIFESTO DELL&apos;INIZIATIVA
+                UN MONDO SENZA BARRIERE E SENZA FRONTIERE
               </h3>
 
               <div className="text-xs text-white/90 leading-relaxed space-y-2">
                 <p>
-                  <strong>Data:</strong> 3 Ottobre 2026
+                  <strong>Protagonista:</strong> Salvatore Cimmino
                 </p>
                 <p>
-                  <strong>Rotta:</strong> Acquamorta (09:00) → Punta Lingua / Procida (12:30 circa)
+                  <strong>Data:</strong> Sabato 3 Ottobre 2026 (ore 09:00)
                 </p>
                 <p>
-                  <strong>Claim:</strong> Tre Libri. Un Mare. Un Ponte.
+                  <strong>Rotta:</strong> Marina di Monte di Procida (Acquamorta) → Procida
                 </p>
                 <p>
-                  <strong>Organizzato da:</strong> Vela Latina Monte di Procida, Laboratorio Cumano, Io Respiro Mare.
+                  <strong>Tema Centrale:</strong> Studenti e studentesse con disabilità dei Campi Flegrei post-terremoto &amp; Diritto allo Studio
+                </p>
+                <p>
+                  <strong>Organizzato da:</strong> Vela Latina Monte di Procida (Piccolo Museo del Mare), Laboratorio Cumano, Io Respiro Mare (Mirko Vista).
                 </p>
                 <p className="text-[#FFE500] font-bold text-[11px] pt-1">
                   * Data e orari soggetti a variazioni in base alle condizioni meteo-marine.
@@ -102,7 +105,7 @@ export function OfficialPoster() {
 
                 <a
                   href={eventConfig.poster.imageSrc}
-                  download="locandina-a-nuoto-nei-mari-del-globo.svg"
+                  download="locandina-ufficiale-a-nuoto-nei-mari-del-globo.png"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#071A42] hover:bg-[#040F28] text-white font-bold text-xs uppercase tracking-wider transition-all border border-white/30"
                 >
                   <Download className="w-4 h-4 text-[#22E57A]" />

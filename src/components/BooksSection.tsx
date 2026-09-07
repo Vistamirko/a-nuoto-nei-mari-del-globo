@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { BookOpen, GraduationCap, Quote } from "lucide-react";
+import { BookOpen, GraduationCap, Quote, Landmark } from "lucide-react";
 import { eventConfig } from "@/config/event";
 
 export function BooksSection() {
@@ -16,18 +16,18 @@ export function BooksSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#FFE500] text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-[#FFE500]/40">
             <GraduationCap className="w-3.5 h-3.5 text-[#FFE500]" />
-            <span>PROGETTO EDUCATIVO NELLE SCUOLE</span>
+            <span>PERCORSO EDUCATIVO &middot; SCUOLE &amp; COMUNITÀ</span>
           </div>
 
           <h2 className="text-fluid-headline font-macchia text-white tracking-tight uppercase">
-            TRE LIBRI. UN MARE. UN PONTE.
+            {eventConfig.books.title}
           </h2>
 
           <p className="mt-3 font-mono text-xs sm:text-sm text-[#22E57A] font-bold uppercase tracking-widest">
-            A NUOTO E IN VELA LATINA · {eventConfig.event.dateLabel}
+            {eventConfig.books.subtitle}
           </p>
 
-          <p className="mt-4 font-mono text-xs sm:text-sm text-white/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 font-mono text-xs sm:text-sm text-white/85 max-w-2xl mx-auto leading-relaxed">
             {eventConfig.books.description}
           </p>
         </div>
@@ -59,7 +59,7 @@ export function BooksSection() {
                     </div>
                     <div className="absolute inset-0 bg-[#071A42]/60 opacity-0 group-hover/cover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
                       <span className="px-4 py-2 rounded-xl bg-[#FFE500] text-[#071A42] font-mono font-extrabold text-xs uppercase tracking-wider shadow-lg">
-                        VEDI SU AMAZON ↗
+                        {book.buyLabel || "SCOPRI IL LIBRO ↗"}
                       </span>
                     </div>
                   </a>
@@ -98,7 +98,7 @@ export function BooksSection() {
                       className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FFE500] hover:bg-yellow-300 text-[#071A42] font-mono font-extrabold text-xs uppercase tracking-wider transition-all shadow-md hover:scale-105"
                     >
                       <BookOpen className="w-3.5 h-3.5" />
-                      <span>DISPONIBILE SU AMAZON ↗</span>
+                      <span>{book.buyLabel || "DISPONIBILE ONLINE ↗"}</span>
                     </a>
                   </div>
                 )}
@@ -112,6 +112,14 @@ export function BooksSection() {
               )}
             </div>
           ))}
+        </div>
+
+        {/* Note on Piccolo Museo del Mare meetings */}
+        <div className="mt-12 p-6 rounded-2xl bg-[#1257C9]/40 border border-white/20 text-center font-mono text-xs text-white/80 max-w-3xl mx-auto flex items-center justify-center gap-3">
+          <Landmark className="w-5 h-5 text-[#FFE500] shrink-0" />
+          <span>
+            I libri sono stati al centro degli incontri culturali presso la sede del <strong>Piccolo Museo del Mare</strong> di Monte di Procida, ponendo le basi per questa grande traversata condivisa.
+          </span>
         </div>
       </div>
     </section>
