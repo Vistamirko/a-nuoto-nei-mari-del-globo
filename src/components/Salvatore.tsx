@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Award, Sparkles, Quote, Globe, Waves } from "lucide-react";
+import { Award, Sparkles, Quote, Globe, FileText, ArrowUpRight } from "lucide-react";
 import { eventConfig } from "@/config/event";
 
 export function Salvatore() {
@@ -81,6 +81,35 @@ export function Salvatore() {
               <p className="italic">
                 &ldquo;{eventConfig.salvatore.keyMessage}&rdquo;
               </p>
+            </div>
+
+            {/* Official Press Release Link */}
+            <div className="pt-2">
+              <a
+                href={eventConfig.salvatore.pressReleaseUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-5 rounded-2xl bg-gradient-to-r from-[#1257C9] to-[#0B45A8] border-2 border-[#FFE500] hover:border-[#22E57A] shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02]"
+              >
+                <div className="flex items-center gap-3.5">
+                  <div className="w-10 h-10 rounded-xl bg-[#071A42] flex items-center justify-center text-[#FFE500] shrink-0 border border-white/20">
+                    <FileText className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono font-bold text-[#FFE500] uppercase tracking-wider block">
+                      COMUNICATO STAMPA UFFICIALE
+                    </span>
+                    <p className="font-macchia text-sm sm:text-base text-white uppercase leading-tight group-hover:text-[#22E57A] transition-colors">
+                      {eventConfig.salvatore.pressReleaseTitle}
+                    </p>
+                  </div>
+                </div>
+
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FFE500] text-[#071A42] font-mono font-bold text-xs uppercase tracking-wider shrink-0 shadow-md group-hover:bg-[#22E57A] transition-colors">
+                  <span>LEGGI</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </span>
+              </a>
             </div>
           </div>
 

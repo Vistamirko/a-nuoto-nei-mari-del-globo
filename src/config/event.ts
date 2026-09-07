@@ -74,6 +74,8 @@ export interface EventConfig {
     quoteLines: string[];
     bioParagraphs: string[];
     keyMessage: string;
+    pressReleaseUrl: string;
+    pressReleaseTitle: string;
     imageSrc: string;
   };
   initiative: {
@@ -171,7 +173,9 @@ export const eventConfig: EventConfig = {
       "Il 3 ottobre 2026 porta questa testimonianza nei Campi Flegrei: una traversata dalla Marina di Monte di Procida a Procida per difendere il diritto allo studio degli alunni con disabilità del territorio flegreo colpito dal terremoto e dal bradisismo.",
     ],
     keyMessage:
-      "La disabilità non può essere confinata a una dimensione privata o familiare, ma deve essere riconosciuta come una sfida che interroga l'intera collettività.",
+      "La disabilità risiede nella società, non nella persona. La Progettazione Universale è una responsabilità collettiva e un dovere costituzionale.",
+    pressReleaseUrl: "https://www.salvatorecimmino.it/?p=5452",
+    pressReleaseTitle: "Contro la deriva escludente: la disabilità è un fatto collettivo che difende la nostra Costituzione",
     imageSrc: "/images/salvatore-cimmino-600x800.jpg",
   },
   initiative: {
