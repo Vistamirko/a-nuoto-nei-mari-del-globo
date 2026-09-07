@@ -216,9 +216,9 @@ export const eventConfig: EventConfig = {
       {
         number: "02",
         name: "CANALE & PERIPLO DI PROCIDA",
-        subtitle: "Traversata a Nuoto & Scorta in Vela Latina",
+        subtitle: "Traversata a Nuoto & Scorta Vela Latina Monte di Procida",
         description:
-          "La sfida a bracciate nelle correnti del Canale di Procida e lungo la costa dell'isola vulcanica, scortato dalle storiche imbarcazioni tradizionali a Vela Latina.",
+          "La sfida a bracciate nelle correnti del Canale di Procida e lungo la costa dell'isola vulcanica, scortato dalle storiche imbarcazioni tradizionali dell'Associazione Vela Latina Monte di Procida.",
         highlight: "Traversata a Nuoto",
       },
       {
@@ -304,7 +304,7 @@ export const eventConfig: EventConfig = {
         id: "traversata",
         time: "Mattina",
         phase: "Fase 03",
-        title: "TRAVERSATA & SCORTA VELA LATINA",
+        title: "TRAVERSATA & SCORTA VELA LATINA MONTE DI PROCIDA",
         location: "Canale di Procida & Coste dell'Isola",
         description:
           "La traversata a nuoto scortata dalla flotta tradizionale dell'Associazione Vela Latina Monte di Procida e dalle unità di sicurezza in mare.",

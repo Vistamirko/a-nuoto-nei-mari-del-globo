@@ -156,7 +156,7 @@ export function Hero() {
 
           <div className="flex items-center gap-2 text-white/75 text-[11px] sm:text-xs">
             <Award className="w-3.5 h-3.5 text-[#FFE500]" />
-            <span>ORGANIZZATO DA: VELA LATINA &middot; LABORATORIO CUMANO &middot; IO RESPIRO MARE</span>
+            <span>ORGANIZZATO DA: VELA LATINA MONTE DI PROCIDA &middot; LABORATORIO CUMANO &middot; IO RESPIRO MARE</span>
           </div>
         </div>
       </div>
